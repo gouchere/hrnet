@@ -81,6 +81,6 @@ export default function List(){
                     header={HeaderTab}
                     headerClass="employe-list__header"
                     title="Liste des employes" className="employe-list" 
-                    />
+                    currentPage={1}/>
     )
 }

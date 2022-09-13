@@ -15,17 +15,21 @@ const Datatable=(props)=>{
         header, 
         sortData,
         paginator, templatePages, currentPage, rows}=props
-        const [nbRowsI, setNbRowsI]=useState(rows?rows:5)
+    const [nbRowsI, setNbRowsI]=useState(rows?rows:5)
+        // mémorise la page en cours su paginator
+    const [activePage, setActivePage]=useState(currentPage?currentPage:0)
 
-        const pagineData=(currentPage, rows)=>{
+        const pagineData=(CPage, rows)=>{            
             const nbRows= rows?rows:5;
-            const currentP=currentPage?currentPage:0;            
+            const currentP=CPage>=0?CPage:activePage;  
+            console.log("Pagine ...", currentP, CPage)          
             setDisplayData(values.slice(currentP*nbRows, (currentP*nbRows)+nbRows))
             setNbRowsI(nbRows)
+            setActivePage(currentP)
         }
 
         useEffect(()=>{
-            pagineData(currentPage,rows)
+            pagineData(activePage,rows)
         },[])
     return (
     <>
@@ -35,7 +39,7 @@ const Datatable=(props)=>{
             <Body columns={columns} values={displayData} />
         </table>
         <Footer values={values} rows={nbRowsI} paginatorFn={pagineData}>
-            <Paginator values={values} paginatorFn={pagineData} rows={nbRowsI} />
+            <Paginator values={values} paginatorFn={pagineData} rows={nbRowsI} activePage={activePage}/>
         </Footer>
     </>
     )
