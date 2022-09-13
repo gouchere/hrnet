@@ -30,7 +30,7 @@ const Datatable=(props)=>{
 
         useEffect(()=>{
             pagineData(activePage,rows)
-        },[])
+        },[values])
     return (
     <>
         <table className="table-data">
