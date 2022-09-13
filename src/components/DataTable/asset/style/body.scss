@@ -1,0 +1,22 @@
+
+.data-table-row{
+    height: 35px;
+    border: none;
+
+}
+.data-table-row:nth-child(even){
+    background: #FFF;
+}
+.data-table-row:nth-child(odd){
+    background: #e2e7ff;
+    
+}
+  
+.data-table-row  td{
+    border: none;
+    outline:  0px;
+}
+ 
+.data-table-row.header{
+    //outline: 1px solid #000;
+}

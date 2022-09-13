@@ -1,0 +1,82 @@
+body {
+  font-size: 1em;
+}
+
+.table-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+th {
+  font-size: 0.9em;
+}
+
+th span svg {
+  float: right;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+
+.data-list-footer {
+  display: flex;
+  justify-content: flex-end;
+  width: 99%;
+  background: rgb(216, 215, 215);
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.btn-prev-page, .btn-next-page, .btn-page {
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0px 1px 0px 1px;
+}
+
+.btn-next-page, .btn-prev-page {
+  width: 70px;
+}
+
+.btn-next-page {
+  margin: 0px 15px 0px 7px;
+}
+
+.btn-prev-page {
+  margin: 0px 10px 0px 0px;
+}
+
+.btn-page, .btn-next-page, .btn-prev-page {
+  cursor: pointer;
+}
+
+.btn-page {
+  width: 30px;
+  height: 30px;
+}
+
+.btn-page.active {
+  background: rgb(181, 197, 250);
+}
+
+.select-pages {
+  text-align: center;
+}
+
+.data-table-row {
+  height: 35px;
+  border: none;
+}
+
+.data-table-row:nth-child(even) {
+  background: #FFF;
+}
+
+.data-table-row:nth-child(odd) {
+  background: #e2e7ff;
+}
+
+.data-table-row td {
+  border: none;
+  outline: 0px;
+}
+
+/*# sourceMappingURL=style.css.map */

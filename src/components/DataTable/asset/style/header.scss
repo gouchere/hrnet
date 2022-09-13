@@ -1,0 +1,14 @@
+.table-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+th{
+    font-size: 0.9em;
+}
+
+th span svg{
+    float: right;
+    cursor: pointer;
+    font-size: 0.8em;
+}
